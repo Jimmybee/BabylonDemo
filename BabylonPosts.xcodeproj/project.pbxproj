@@ -12,9 +12,28 @@
 		6644CC251F15593800C6F4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6644CC231F15593800C6F4F9 /* Main.storyboard */; };
 		6644CC271F15593800C6F4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6644CC261F15593800C6F4F9 /* Assets.xcassets */; };
 		6644CC2A1F15593800C6F4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6644CC281F15593800C6F4F9 /* LaunchScreen.storyboard */; };
+		6644CC321F1559DB00C6F4F9 /* JsonPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC311F1559DB00C6F4F9 /* JsonPlaceholder.swift */; };
+		6644CC351F155B4500C6F4F9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC341F155B4500C6F4F9 /* Post.swift */; };
+		6644CC371F155BAF00C6F4F9 /* IntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC361F155BAF00C6F4F9 /* IntTransform.swift */; };
+		6644CC3D1F155C3600C6F4F9 /* JsonNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC3C1F155C3600C6F4F9 /* JsonNetwork.swift */; };
+		6644CC3F1F1568A800C6F4F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC3E1F1568A800C6F4F9 /* User.swift */; };
+		6644CC411F15690500C6F4F9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC401F15690500C6F4F9 /* Comment.swift */; };
+		6644CC471F159C3300C6F4F9 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC461F159C3300C6F4F9 /* PostService.swift */; };
+		6644CC491F159C3E00C6F4F9 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC481F159C3E00C6F4F9 /* UserService.swift */; };
+		6644CC4B1F159C4800C6F4F9 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC4A1F159C4800C6F4F9 /* CommentService.swift */; };
+		6644CC4E1F16B26000C6F4F9 /* PostRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC4D1F16B26000C6F4F9 /* PostRealm.swift */; };
+		6644CC501F16BB8C00C6F4F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC4F1F16BB8C00C6F4F9 /* DetailViewController.swift */; };
+		6644CC521F16BCD400C6F4F9 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC511F16BCD400C6F4F9 /* UIStoryboard.swift */; };
+		6644CC541F16CBE500C6F4F9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC531F16CBE500C6F4F9 /* CardView.swift */; };
+		6644CC571F16CC8900C6F4F9 /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC561F16CC8900C6F4F9 /* CommentTableCell.swift */; };
+		6644CC5E1F16D46200C6F4F9 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC5D1F16D46200C6F4F9 /* UIAlertController.swift */; };
+		6644CC611F16D4C400C6F4F9 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC601F16D4C400C6F4F9 /* RxSwift.swift */; };
+		6644CC641F16D66600C6F4F9 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC631F16D66600C6F4F9 /* ErrorType.swift */; };
+		7F2FFA9543C824DCE63511C8 /* Pods_BabylonPosts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18A141E99F978A371EC0119 /* Pods_BabylonPosts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E992B560B35814E166DE470 /* Pods-BabylonPosts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonPosts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonPosts/Pods-BabylonPosts.debug.xcconfig"; sourceTree = "<group>"; };
 		6644CC1C1F15593800C6F4F9 /* BabylonPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabylonPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6644CC1F1F15593800C6F4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6644CC211F15593800C6F4F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +41,25 @@
 		6644CC261F15593800C6F4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6644CC291F15593800C6F4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6644CC2B1F15593800C6F4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6644CC311F1559DB00C6F4F9 /* JsonPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonPlaceholder.swift; sourceTree = "<group>"; };
+		6644CC341F155B4500C6F4F9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6644CC361F155BAF00C6F4F9 /* IntTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntTransform.swift; sourceTree = "<group>"; };
+		6644CC3C1F155C3600C6F4F9 /* JsonNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonNetwork.swift; sourceTree = "<group>"; };
+		6644CC3E1F1568A800C6F4F9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6644CC401F15690500C6F4F9 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		6644CC461F159C3300C6F4F9 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		6644CC481F159C3E00C6F4F9 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		6644CC4A1F159C4800C6F4F9 /* CommentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		6644CC4D1F16B26000C6F4F9 /* PostRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRealm.swift; sourceTree = "<group>"; };
+		6644CC4F1F16BB8C00C6F4F9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6644CC511F16BCD400C6F4F9 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		6644CC531F16CBE500C6F4F9 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6644CC561F16CC8900C6F4F9 /* CommentTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
+		6644CC5D1F16D46200C6F4F9 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		6644CC601F16D4C400C6F4F9 /* RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
+		6644CC631F16D66600C6F4F9 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		76625A61268E6AAF360EF249 /* Pods-BabylonPosts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonPosts.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonPosts/Pods-BabylonPosts.release.xcconfig"; sourceTree = "<group>"; };
+		B18A141E99F978A371EC0119 /* Pods_BabylonPosts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabylonPosts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2FFA9543C824DCE63511C8 /* Pods_BabylonPosts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +79,8 @@
 			children = (
 				6644CC1E1F15593800C6F4F9 /* BabylonPosts */,
 				6644CC1D1F15593800C6F4F9 /* Products */,
+				9DA5E4D1A9A33B1C8287A390 /* Pods */,
+				B50D7A8D50E0AB9EF8C3941C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +96,159 @@
 			isa = PBXGroup;
 			children = (
 				6644CC1F1F15593800C6F4F9 /* AppDelegate.swift */,
-				6644CC211F15593800C6F4F9 /* ViewController.swift */,
+				6644CC5F1F16D46700C6F4F9 /* Extensions */,
+				6644CC381F155BB200C6F4F9 /* Helpers */,
+				6644CC3A1F155BC000C6F4F9 /* Model */,
+				6644CC3B1F155BD700C6F4F9 /* Network */,
+				6644CC591F16CFC600C6F4F9 /* Realm */,
+				6644CC581F16CD3800C6F4F9 /* Storyboard */,
+				6644CC551F16CBE900C6F4F9 /* UISubClasses */,
+				6644CC5B1F16CFF900C6F4F9 /* ViewControllers */,
+				6644CC5C1F16D06800C6F4F9 /* Resources */,
+			);
+			path = BabylonPosts;
+			sourceTree = "<group>";
+		};
+		6644CC381F155BB200C6F4F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC391F155BB800C6F4F9 /* ObjectMapper */,
+				6644CC621F16D4D200C6F4F9 /* RxSWift */,
+				6644CC651F16D71400C6F4F9 /* ErrorType */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		6644CC391F155BB800C6F4F9 /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC361F155BAF00C6F4F9 /* IntTransform.swift */,
+			);
+			name = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		6644CC3A1F155BC000C6F4F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC341F155B4500C6F4F9 /* Post.swift */,
+				6644CC3E1F1568A800C6F4F9 /* User.swift */,
+				6644CC401F15690500C6F4F9 /* Comment.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6644CC3B1F155BD700C6F4F9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC4C1F159C4C00C6F4F9 /* Service */,
+				6644CC5A1F16CFDA00C6F4F9 /* Backend */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		6644CC4C1F159C4C00C6F4F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC461F159C3300C6F4F9 /* PostService.swift */,
+				6644CC481F159C3E00C6F4F9 /* UserService.swift */,
+				6644CC4A1F159C4800C6F4F9 /* CommentService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		6644CC551F16CBE900C6F4F9 /* UISubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC531F16CBE500C6F4F9 /* CardView.swift */,
+				6644CC561F16CC8900C6F4F9 /* CommentTableCell.swift */,
+			);
+			name = UISubClasses;
+			sourceTree = "<group>";
+		};
+		6644CC581F16CD3800C6F4F9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
 				6644CC231F15593800C6F4F9 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		6644CC591F16CFC600C6F4F9 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC4D1F16B26000C6F4F9 /* PostRealm.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		6644CC5A1F16CFDA00C6F4F9 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC3C1F155C3600C6F4F9 /* JsonNetwork.swift */,
+				6644CC311F1559DB00C6F4F9 /* JsonPlaceholder.swift */,
+			);
+			name = Backend;
+			sourceTree = "<group>";
+		};
+		6644CC5B1F16CFF900C6F4F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC211F15593800C6F4F9 /* ViewController.swift */,
+				6644CC4F1F16BB8C00C6F4F9 /* DetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6644CC5C1F16D06800C6F4F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				6644CC261F15593800C6F4F9 /* Assets.xcassets */,
 				6644CC281F15593800C6F4F9 /* LaunchScreen.storyboard */,
 				6644CC2B1F15593800C6F4F9 /* Info.plist */,
 			);
-			path = BabylonPosts;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6644CC5F1F16D46700C6F4F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC511F16BCD400C6F4F9 /* UIStoryboard.swift */,
+				6644CC5D1F16D46200C6F4F9 /* UIAlertController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6644CC621F16D4D200C6F4F9 /* RxSWift */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC601F16D4C400C6F4F9 /* RxSwift.swift */,
+			);
+			name = RxSWift;
+			sourceTree = "<group>";
+		};
+		6644CC651F16D71400C6F4F9 /* ErrorType */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC631F16D66600C6F4F9 /* ErrorType.swift */,
+			);
+			name = ErrorType;
+			sourceTree = "<group>";
+		};
+		9DA5E4D1A9A33B1C8287A390 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E992B560B35814E166DE470 /* Pods-BabylonPosts.debug.xcconfig */,
+				76625A61268E6AAF360EF249 /* Pods-BabylonPosts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B50D7A8D50E0AB9EF8C3941C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B18A141E99F978A371EC0119 /* Pods_BabylonPosts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6644CC2E1F15593800C6F4F9 /* Build configuration list for PBXNativeTarget "BabylonPosts" */;
 			buildPhases = (
+				C7DFA4D8E32513273DC592A8 /* [CP] Check Pods Manifest.lock */,
 				6644CC181F15593800C6F4F9 /* Sources */,
 				6644CC191F15593800C6F4F9 /* Frameworks */,
 				6644CC1A1F15593800C6F4F9 /* Resources */,
+				2A432DBEAC2A16D4ECCB27FD /* [CP] Embed Pods Frameworks */,
+				02150371B9519F6BFB2145E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +322,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02150371B9519F6BFB2145E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonPosts/Pods-BabylonPosts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A432DBEAC2A16D4ECCB27FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabylonPosts/Pods-BabylonPosts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7DFA4D8E32513273DC592A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6644CC181F15593800C6F4F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +377,23 @@
 			files = (
 				6644CC221F15593800C6F4F9 /* ViewController.swift in Sources */,
 				6644CC201F15593800C6F4F9 /* AppDelegate.swift in Sources */,
+				6644CC321F1559DB00C6F4F9 /* JsonPlaceholder.swift in Sources */,
+				6644CC411F15690500C6F4F9 /* Comment.swift in Sources */,
+				6644CC471F159C3300C6F4F9 /* PostService.swift in Sources */,
+				6644CC521F16BCD400C6F4F9 /* UIStoryboard.swift in Sources */,
+				6644CC491F159C3E00C6F4F9 /* UserService.swift in Sources */,
+				6644CC4B1F159C4800C6F4F9 /* CommentService.swift in Sources */,
+				6644CC371F155BAF00C6F4F9 /* IntTransform.swift in Sources */,
+				6644CC351F155B4500C6F4F9 /* Post.swift in Sources */,
+				6644CC571F16CC8900C6F4F9 /* CommentTableCell.swift in Sources */,
+				6644CC4E1F16B26000C6F4F9 /* PostRealm.swift in Sources */,
+				6644CC3D1F155C3600C6F4F9 /* JsonNetwork.swift in Sources */,
+				6644CC641F16D66600C6F4F9 /* ErrorType.swift in Sources */,
+				6644CC3F1F1568A800C6F4F9 /* User.swift in Sources */,
+				6644CC541F16CBE500C6F4F9 /* CardView.swift in Sources */,
+				6644CC611F16D4C400C6F4F9 /* RxSwift.swift in Sources */,
+				6644CC501F16BB8C00C6F4F9 /* DetailViewController.swift in Sources */,
+				6644CC5E1F16D46200C6F4F9 /* UIAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +514,7 @@
 		};
 		6644CC2F1F15593800C6F4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E992B560B35814E166DE470 /* Pods-BabylonPosts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G55S74JQUS;
@@ -272,6 +528,7 @@
 		};
 		6644CC301F15593800C6F4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76625A61268E6AAF360EF249 /* Pods-BabylonPosts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G55S74JQUS;
@@ -302,6 +559,7 @@
 				6644CC301F15593800C6F4F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
