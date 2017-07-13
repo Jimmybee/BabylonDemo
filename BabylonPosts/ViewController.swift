@@ -13,24 +13,14 @@ import RxOptional
 
 class ViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
     
     @IBOutlet weak var postTable: UITableView!
     @IBOutlet weak var refreshBttn: UIBarButtonItem!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        bindUI()
-        loadRealm()
-        refreshTable()
-        setupTap()
-        
-    }
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate let posts = Variable<[Post]>([])
     
-    let posts = Variable<[Post]>([])
-    
-    var commentsO: Observable<[Comment]>  {
+    fileprivate var commentsO: Observable<[Comment]>  {
         return CommentService().get().map { [weak self] (result) -> [Comment]? in
             switch result {
             case .arraySuccess(array: let result):
@@ -45,7 +35,7 @@ class ViewController: UIViewController {
         .shareReplay(1)
     }
     
-    var usersO: Observable<[User]>  {
+    fileprivate var usersO: Observable<[User]>  {
         return UserService().get().map { (result) -> [User]? in
             switch result {
             case .arraySuccess(array: let result):
@@ -59,12 +49,22 @@ class ViewController: UIViewController {
         .shareReplay(1)
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        bindUI()
+        loadRealm()
+        refreshTable()
+        setupTap()
+        
+    }
 }
 
 
+//MARK: - RxSwift setup
 extension ViewController {
     
-    func bindUI() {
+    fileprivate func bindUI() {
         posts.asObservable()
             .bindTo(postTable
                 .rx
@@ -76,12 +76,11 @@ extension ViewController {
             .addDisposableTo(disposeBag)
     }
     
-    func loadRealm() {
+    fileprivate func loadRealm() {
         posts.value = Array(PostRealm().get()).map({Post($0)})
     }
     
-    func refreshTable() {
-        
+    fileprivate func refreshTable() {
         refreshBttn.rx.tap
             .startWith(())
             .flatMapLatest({ (_) -> Observable<JsonResult> in
@@ -101,10 +100,9 @@ extension ViewController {
             .filterNil()
             .bindTo(posts)
             .addDisposableTo(disposeBag)
-        
     }
     
-    func setupTap() {
+   fileprivate func setupTap() {
         postTable.rx
             .modelSelected(Post.self)
             .subscribe(onNext: { [weak self] (post) in
@@ -124,11 +122,11 @@ extension ViewController {
 // MARK: Navigation
 extension ViewController {
     
-    func showPostDetail(_ post: Post) {
-        Observable.combineLatest(usersO, commentsO) { (users, comments) -> DetailModel in
+    fileprivate func showPostDetail(_ post: Post) {
+        Observable.combineLatest(usersO, commentsO) { (users, comments) -> DetailViewModel in
             let user = users.filter({$0.id == post.userId}).first
             let comments = comments.filter({$0.postId == post.id})
-            return DetailModel(post: post, author: user?.name ?? "", comments: comments)
+            return DetailViewModel(post: post, author: user?.name ?? "", comments: comments)
         }.subscribe(onNext: { [weak self] (model) in
             let detailController = DetailViewController.storyboardInit(detailModel: model)
             self?.navigationController?.pushViewController(detailController, animated: true)

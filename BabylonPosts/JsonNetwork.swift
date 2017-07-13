@@ -30,23 +30,6 @@ class JsonNetwork {
             .catchErrorJustReturn(JsonResult.fail(error: ErrorType.network))
     }
     
-    static func performArrayRequest<T: Mappable>(type: T, target: JsonPlaceholder, callback: @escaping (JsonResult) -> ()) {
-        
-        provider.request(target) { (response) in
-            switch response {
-            case .failure(let moyaError):
-                callback(JsonResult.fail(error: ErrorType.network))
-            case .success(let response):
-                let json = JSON(data: response.data)
-                let jsonString = String(describing: json)
-                guard let results = Mapper<T>().mapArray(JSONString: jsonString) else {
-                    callback(JsonResult.fail(error: ErrorType.mapping))
-                    return
-                }
-                callback(JsonResult.arraySuccess(array: results))
-            }
-        }
-    }
 }
 
 

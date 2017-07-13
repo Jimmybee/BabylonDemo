@@ -14,13 +14,13 @@ class DetailViewController: UIViewController {
     
     private static var storyboardId = "DetailViewController"
     
-    static func storyboardInit(detailModel: DetailModel) -> DetailViewController {
+    static func storyboardInit(detailModel: DetailViewModel) -> DetailViewController {
         let vc = UIStoryboard.mainViewControllerWith(id: storyboardId) as! DetailViewController
         vc.detailModel = detailModel
         return vc
     }
 
-    var detailModel: DetailModel!
+    var detailModel: DetailViewModel!
     
     let disposeBag = DisposeBag()
     
@@ -54,20 +54,5 @@ class DetailViewController: UIViewController {
         
     }
     
-    
-}
-
-
-struct DetailModel {
-    
-    var post: Post
-    var comments: [Comment]
-    var author: String
-    
-    init(post: Post, author: String, comments: [Comment]) {
-        self.post = post
-        self.author = author
-        self.comments = comments
-    }
     
 }
