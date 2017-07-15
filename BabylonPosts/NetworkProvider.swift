@@ -16,13 +16,13 @@ class NetworkProvider {
     
     static let provider = RxMoyaProvider<JsonPlaceholder>()
     
-    static func performArrayRequest<T: Mappable>(type: T, target: JsonPlaceholder) -> Observable<NetworkResult> {
+    static func performArrayRequest<T: Mappable>(with mapper: Mapper<T>, target: JsonPlaceholder) -> Observable<NetworkResult> {
         return provider
             .request(target)
             .flatMapLatest { (response) -> Observable<NetworkResult> in
                 let json = JSON(data: response.data)
                 let jsonString = String(describing: json)
-                guard let posts = Mapper<T>().mapArray(JSONString: jsonString) else {
+                guard let posts = mapper.mapArray(JSONString: jsonString) else {
                     return just(NetworkResult.fail(error:ErrorType.mapping))
                 }
                 return just(NetworkResult.arraySuccess(array: posts))
