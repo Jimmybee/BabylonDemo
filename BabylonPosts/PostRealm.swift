@@ -24,14 +24,14 @@ class PostRealm: Object {
         self.body = post.body
     }
     
-    func get() -> Results<PostRealm> {
+    static func get() -> Results<PostRealm> {
         let realm = try! Realm()
         return realm.objects(PostRealm.self)
     }
     
-    func save(posts: [Post], completion: () -> ()) {
+    static func saveAll(posts: [Post], completion: () -> ()) {
         let realm = try! Realm()
-        let current = get()
+        let current = PostRealm.get()
         let realmPosts = posts.map({PostRealm($0)})
         try! realm.write {
            realm.delete(current)

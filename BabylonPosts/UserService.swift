@@ -11,9 +11,9 @@ import RxSwift
 
 class UserService {
     
-    let target = JsonPlaceholder.users
+    static let target = JsonPlaceholder.users
     
-    func get() -> Observable<JsonResult> {
-        return JsonNetwork.performArrayRequest(type: User(), target: target)
+    static func get() -> Observable<NetworkResult> {
+        return NetworkProvider.performArrayRequest(type: User(), target: target)
     }
 }

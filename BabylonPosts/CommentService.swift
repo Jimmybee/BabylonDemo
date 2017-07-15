@@ -11,10 +11,10 @@ import RxSwift
 
 class CommentService {
     
-    let target = JsonPlaceholder.comments
+    static let target = JsonPlaceholder.comments
     
-    func get() -> Observable<JsonResult> {
-        return JsonNetwork.performArrayRequest(type: Comment(), target: target)
+    static func get() -> Observable<NetworkResult> {
+        return NetworkProvider.performArrayRequest(type: Comment(), target: target)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  JsonNetwork.swift
+//  NetworkProvider.swift
 //  BabylonPosts
 //
 //  Created by James Birtwell on 11/07/2017.
@@ -12,28 +12,23 @@ import SwiftyJSON
 import ObjectMapper
 import RxSwift
 
-class JsonNetwork {
+class NetworkProvider {
     
     static let provider = RxMoyaProvider<JsonPlaceholder>()
     
-    static func performArrayRequest<T: Mappable>(type: T, target: JsonPlaceholder) -> Observable<JsonResult> {
+    static func performArrayRequest<T: Mappable>(type: T, target: JsonPlaceholder) -> Observable<NetworkResult> {
         return provider
             .request(target)
-            .flatMapLatest { (response) -> Observable<JsonResult> in
+            .flatMapLatest { (response) -> Observable<NetworkResult> in
                 let json = JSON(data: response.data)
                 let jsonString = String(describing: json)
                 guard let posts = Mapper<T>().mapArray(JSONString: jsonString) else {
-                    return just(JsonResult.fail(error:ErrorType.mapping))
+                    return just(NetworkResult.fail(error:ErrorType.mapping))
                 }
-                return just(JsonResult.arraySuccess(array: posts))
+                return just(NetworkResult.arraySuccess(array: posts))
             }
-            .catchErrorJustReturn(JsonResult.fail(error: ErrorType.network))
+            .catchErrorJustReturn(NetworkResult.fail(error: ErrorType.network))
     }
     
 }
 
-
-enum JsonResult {
-    case fail(error: ErrorType)
-    case arraySuccess(array: [Mappable])
-}

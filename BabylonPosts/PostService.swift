@@ -11,10 +11,10 @@ import RxSwift
 
 class PostService {
     
-    let target = JsonPlaceholder.posts
+    static let target = JsonPlaceholder.posts
     
-    func get() -> Observable<JsonResult> {
-        return JsonNetwork.performArrayRequest(type: Post(), target: target)
+    static func get() -> Observable<NetworkResult> {
+        return NetworkProvider.performArrayRequest(type: Post(), target: target)
     }
 }
 
