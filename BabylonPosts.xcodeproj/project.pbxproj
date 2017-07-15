@@ -146,9 +146,10 @@
 		6644CC3B1F155BD700C6F4F9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6644CC5A1F16CFDA00C6F4F9 /* Backend */,
 				66D5A9F61F1A37190005317D /* NetworkResult */,
+				6644CC5A1F16CFDA00C6F4F9 /* Provider */,
 				6644CC4C1F159C4C00C6F4F9 /* Service */,
+				66D5A9F71F1A3C690005317D /* Target */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -188,13 +189,12 @@
 			name = Realm;
 			sourceTree = "<group>";
 		};
-		6644CC5A1F16CFDA00C6F4F9 /* Backend */ = {
+		6644CC5A1F16CFDA00C6F4F9 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
 				6644CC3C1F155C3600C6F4F9 /* NetworkProvider.swift */,
-				6644CC311F1559DB00C6F4F9 /* JsonPlaceholder.swift */,
 			);
-			name = Backend;
+			name = Provider;
 			sourceTree = "<group>";
 		};
 		6644CC5B1F16CFF900C6F4F9 /* ViewControllers */ = {
@@ -249,6 +249,14 @@
 				66D5A9F41F1A2B380005317D /* NetworkResult.swift */,
 			);
 			name = NetworkResult;
+			sourceTree = "<group>";
+		};
+		66D5A9F71F1A3C690005317D /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				6644CC311F1559DB00C6F4F9 /* JsonPlaceholder.swift */,
+			);
+			name = Target;
 			sourceTree = "<group>";
 		};
 		9DA5E4D1A9A33B1C8287A390 /* Pods */ = {
