@@ -14,6 +14,8 @@ class MainViewModel {
     
     let disposeBag = DisposeBag()
     var handleError: ((NetworkResult?) ->())?
+    var handleProgressStart: (() ->())?
+    var handleProgressComplete: (() ->())?
     let posts = Variable<[Post]>([])
     
     init() {
@@ -55,9 +57,12 @@ class MainViewModel {
     /// - parameter post: The post to view in detail.
     /// - returns: A detail view model with post, post author and post comments.
     func detailModelFor(post: Post) -> Observable<DetailViewModel> {
+        self.handleProgressStart?()
+
         let commentRequest = CommentService.get()
         let userRequest = UserService.get()
         return Observable.zip(commentRequest, userRequest) { [weak self] (commentResult, userResult) -> DetailViewModel? in
+            self?.handleProgressComplete?()
             if commentResult.hasError || userResult.hasError {
                 let firstError = [commentResult, userResult].filter({$0.hasError}).first
                 self?.handleError?(firstError)

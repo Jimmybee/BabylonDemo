@@ -18,18 +18,37 @@ class MainViewController: UIViewController {
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate let mainViewModel = MainViewModel()
+    
+    var activityView = UIActivityIndicatorView()
+    
+    fileprivate(set) lazy var progressView: UIView = {
+        let progressView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        progressView.backgroundColor = UIColor.black
+        progressView.layer.opacity = 0.5
+        
+        self.activityView.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/2)
+        progressView.addSubview(self.activityView)
+        return progressView
+    }()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainViewModel.handleError = handleError
-        
+        setupViewModelOptionalUIHandlers()
         bindUI()
-        setupRefreshPosts()
-        setupTap()
+        setupRefreshPostsBttn()
+        setupTableTap()
+    }
+    
+    /// Add functions to handle errors and progress on network request
+    private func setupViewModelOptionalUIHandlers() {
+        
+        mainViewModel.handleError = handleError
+        mainViewModel.handleProgressStart = showProgressView
+        mainViewModel.handleProgressComplete = hideProgressView
+        
     }
 }
-
 
 //MARK: - RxSwift setup
 extension MainViewController {
@@ -48,7 +67,7 @@ extension MainViewController {
     }
     
     /// On subscribe and on every following tap, view model is updated with latest posts from the server.
-    fileprivate func setupRefreshPosts() {
+    fileprivate func setupRefreshPostsBttn() {
         refreshBttn.rx.tap
             .startWith(())
             .subscribe(onNext: { [weak self] (_) in
@@ -58,7 +77,7 @@ extension MainViewController {
     }
     
    /// Tapping a cell on the table with initiate showing the post detail, and unselect the row.
-   fileprivate func setupTap() {
+   fileprivate func setupTableTap() {
         postTable.rx
             .modelSelected(Post.self)
             .subscribe(onNext: { [weak self] (post) in
@@ -106,9 +125,22 @@ extension MainViewController {
     
 }
 
+// MARK: Handle progress view 
 
-
-
+extension MainViewController {
+    
+    func showProgressView() {
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.addSubview(progressView)
+        activityView.startAnimating()
+    }
+    
+    func hideProgressView() {
+        activityView.stopAnimating()
+        progressView.removeFromSuperview()
+    }
+    
+}
 
 
 
