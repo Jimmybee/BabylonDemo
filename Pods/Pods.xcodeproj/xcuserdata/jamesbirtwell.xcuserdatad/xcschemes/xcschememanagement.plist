@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BabylonPostsTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RxTest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,6 +72,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0571D0E6C3FF505C51A2BB08C68664B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>12C7F769E091CD95DD11F71139579293</key>
 		<dict>
 			<key>primary</key>
@@ -113,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>EFDB85DF4827734B35E8A46720ACAEE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF1267B2D72CEE2D7B237BA259A83F84</key>
 		<dict>
 			<key>primary</key>
 			<true/>

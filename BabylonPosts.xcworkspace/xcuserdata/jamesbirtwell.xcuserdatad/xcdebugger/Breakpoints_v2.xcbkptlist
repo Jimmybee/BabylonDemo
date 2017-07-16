@@ -2,4 +2,129 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BabylonPostsTests/BabylonPostsTests.swift"
+            timestampString = "521922115.200234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "BabylonPostsTests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.__deallocating_deinit"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.784214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.init (invocation : Swift.Optional&lt;__ObjC.NSInvocation&gt;) -&gt; BabylonPostsTests.BabylonPostsTests"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.786927"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.__allocating_init (invocation : Swift.Optional&lt;__ObjC.NSInvocation&gt;) -&gt; BabylonPostsTests.BabylonPostsTests"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.78922"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.init (selector : ObjectiveC.Selector) -&gt; BabylonPostsTests.BabylonPostsTests"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.790679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.__allocating_init (selector : ObjectiveC.Selector) -&gt; BabylonPostsTests.BabylonPostsTests"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.792175"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.init () -&gt; BabylonPostsTests.BabylonPostsTests"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.7937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BabylonPostsTests.BabylonPostsTests.__allocating_init () -&gt; BabylonPostsTests.BabylonPostsTests"
+                  moduleName = "BabylonPostsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamesbirtwell/Documents/BablyonPosts/BabylonPosts/BabylonPostsTests/BabylonPostsTests.swift"
+                  timestampString = "521922115.79506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

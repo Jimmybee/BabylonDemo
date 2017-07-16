@@ -36,6 +36,7 @@ open class RxMoyaProvider<Target>: MoyaProvider<Target> where Target: TargetType
             }
         }
     }
+    
 }
 
 public extension RxMoyaProvider {

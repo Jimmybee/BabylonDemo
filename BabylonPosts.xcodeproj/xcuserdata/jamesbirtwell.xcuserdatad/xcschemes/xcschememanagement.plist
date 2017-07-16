@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BabylonPostsTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>6644CC1B1F15593800C6F4F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66D5A9FB1F1A60A00005317D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
