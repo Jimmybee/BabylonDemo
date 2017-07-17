@@ -18,9 +18,6 @@
 		6644CC3D1F155C3600C6F4F9 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC3C1F155C3600C6F4F9 /* NetworkProvider.swift */; };
 		6644CC3F1F1568A800C6F4F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC3E1F1568A800C6F4F9 /* User.swift */; };
 		6644CC411F15690500C6F4F9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC401F15690500C6F4F9 /* Comment.swift */; };
-		6644CC471F159C3300C6F4F9 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC461F159C3300C6F4F9 /* PostService.swift */; };
-		6644CC491F159C3E00C6F4F9 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC481F159C3E00C6F4F9 /* UserService.swift */; };
-		6644CC4B1F159C4800C6F4F9 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC4A1F159C4800C6F4F9 /* CommentService.swift */; };
 		6644CC4E1F16B26000C6F4F9 /* PostRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC4D1F16B26000C6F4F9 /* PostRealm.swift */; };
 		6644CC501F16BB8C00C6F4F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC4F1F16BB8C00C6F4F9 /* DetailViewController.swift */; };
 		6644CC521F16BCD400C6F4F9 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6644CC511F16BCD400C6F4F9 /* UIStoryboard.swift */; };
@@ -35,6 +32,7 @@
 		66D5A9FF1F1A60A00005317D /* BabylonPostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D5A9FE1F1A60A00005317D /* BabylonPostsTests.swift */; };
 		66D5AA071F1BB3B60005317D /* JSON.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D5AA061F1BB3B60005317D /* JSON.xcassets */; };
 		7F2FFA9543C824DCE63511C8 /* Pods_BabylonPosts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18A141E99F978A371EC0119 /* Pods_BabylonPosts.framework */; };
+		B2FD1E721F1A6C3E00448269 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD1E711F1A6C3E00448269 /* Service.swift */; };
 		A761CDE277BB29204C75D560 /* Pods_BabylonPostsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDF6E2DE32431338EEFD4B8 /* Pods_BabylonPostsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,9 +61,6 @@
 		6644CC3C1F155C3600C6F4F9 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		6644CC3E1F1568A800C6F4F9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6644CC401F15690500C6F4F9 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		6644CC461F159C3300C6F4F9 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
-		6644CC481F159C3E00C6F4F9 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		6644CC4A1F159C4800C6F4F9 /* CommentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		6644CC4D1F16B26000C6F4F9 /* PostRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRealm.swift; sourceTree = "<group>"; };
 		6644CC4F1F16BB8C00C6F4F9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6644CC511F16BCD400C6F4F9 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -85,6 +80,7 @@
 		76625A61268E6AAF360EF249 /* Pods-BabylonPosts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonPosts.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonPosts/Pods-BabylonPosts.release.xcconfig"; sourceTree = "<group>"; };
 		8169D48DE70DE3BC6A133ED8 /* Pods-BabylonPostsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonPostsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonPostsTests/Pods-BabylonPostsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B18A141E99F978A371EC0119 /* Pods_BabylonPosts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabylonPosts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FD1E711F1A6C3E00448269 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E49C20CFA46FE95ACFA872D9 /* Pods-BabylonPostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabylonPostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabylonPostsTests/Pods-BabylonPostsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,9 +183,7 @@
 		6644CC4C1F159C4C00C6F4F9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6644CC461F159C3300C6F4F9 /* PostService.swift */,
-				6644CC481F159C3E00C6F4F9 /* UserService.swift */,
-				6644CC4A1F159C4800C6F4F9 /* CommentService.swift */,
+				B2FD1E711F1A6C3E00448269 /* Service.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -525,14 +519,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6644CC221F15593800C6F4F9 /* MainViewController.swift in Sources */,
+				B2FD1E721F1A6C3E00448269 /* Service.swift in Sources */,
 				6644CC201F15593800C6F4F9 /* AppDelegate.swift in Sources */,
 				6644CC321F1559DB00C6F4F9 /* JsonPlaceholder.swift in Sources */,
 				668B22591F1824D00046A004 /* DetailViewModel.swift in Sources */,
 				6644CC411F15690500C6F4F9 /* Comment.swift in Sources */,
-				6644CC471F159C3300C6F4F9 /* PostService.swift in Sources */,
 				6644CC521F16BCD400C6F4F9 /* UIStoryboard.swift in Sources */,
-				6644CC491F159C3E00C6F4F9 /* UserService.swift in Sources */,
-				6644CC4B1F159C4800C6F4F9 /* CommentService.swift in Sources */,
 				6644CC371F155BAF00C6F4F9 /* IntTransform.swift in Sources */,
 				6644CC351F155B4500C6F4F9 /* Post.swift in Sources */,
 				6644CC571F16CC8900C6F4F9 /* CommentTableCell.swift in Sources */,

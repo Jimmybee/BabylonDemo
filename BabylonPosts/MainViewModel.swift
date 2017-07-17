@@ -11,17 +11,17 @@ import RxSwift
 import RxOptional
 
 class MainViewModel {
-    
+
     let disposeBag = DisposeBag()
     var handleError: ((NetworkResult?) ->())?
     var handleProgressStart: (() ->())?
     var handleProgressComplete: (() ->())?
     let posts = Variable<[Post]>([])
-    
+
     init() {
         loadRealm()
     }
-    
+
     /// Loads any persistent realm posts on model initialisation
     fileprivate func loadRealm() {
         posts.value = Array(PostRealm.get()).map({Post($0)})
@@ -31,24 +31,25 @@ class MainViewModel {
     /// Saves posts to realm. Overwriting any previous posts.
     /// Updates posts in local model.
     func updatePosts() {
-        PostService.get().map { [weak self] (result) -> [Post]? in
-            if result.hasError {
-                self?.handleError?(result)
-                return nil
-            } else {
-                guard let posts = result.successObject() as? [Post] else {
-                    self?.handleError?(nil)
+        Service<Post>.get(target: JsonPlaceholder.posts)
+            .map { [weak self] (result) -> [Post]? in
+                if result.hasError {
+                    self?.handleError?(result)
                     return nil
+                } else {
+                    guard let posts = result.successObject() as? [Post] else {
+                        self?.handleError?(nil)
+                        return nil
+                    }
+                    PostRealm.saveAll(posts: posts, completion: {})
+                    return posts
                 }
-                PostRealm.saveAll(posts: posts, completion: {})
-                return posts
-            }
             }
             .filterNil()
             .bindTo(posts)
             .addDisposableTo(disposeBag)
     }
-    
+
     /// Gets comments and users from server
     /// Waits for both requests to complete.
     /// If both error, only handles first error.
@@ -57,10 +58,9 @@ class MainViewModel {
     /// - parameter post: The post to view in detail.
     /// - returns: A detail view model with post, post author and post comments.
     func detailModelFor(post: Post) -> Observable<DetailViewModel> {
+        let commentRequest = Service<Comment>.get(target: JsonPlaceholder.comments)
+        let userRequest = Service<User>.get(target: JsonPlaceholder.users)
         self.handleProgressStart?()
-
-        let commentRequest = CommentService.get()
-        let userRequest = UserService.get()
         return Observable.zip(commentRequest, userRequest) { [weak self] (commentResult, userResult) -> DetailViewModel? in
             self?.handleProgressComplete?()
             if commentResult.hasError || userResult.hasError {
