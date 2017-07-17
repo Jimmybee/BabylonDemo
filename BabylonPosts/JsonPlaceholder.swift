@@ -40,7 +40,13 @@ extension JsonPlaceholder: TargetType {
     }
     
     var sampleData: Data {
+        switch self {
+        case .posts:
+            let data = NSDataAsset(name: "PostTests", bundle: .main)?.data
+            return data ?? Data()
+        default:
             return "{{\"Implemented\": \"Nope\"}}".data(using: .utf8)!
+        }
     }
     
     var task: Task {
